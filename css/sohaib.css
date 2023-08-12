@@ -1,0 +1,1208 @@
+:root {
+  --blue-c0lor: #0075ff;
+  --blue-color-alt: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f4433b;
+  --grey-color: #888;
+  --linked-color: #0a66c2;
+  --youtube-color: #ff0000;
+  --facebook-color: #1877f2;
+  --twitter-color: #1da1f2;
+  --font-Awesome: "Font Awesome 5 Free";
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input {
+  outline: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 975px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.page {
+  min-height: 100vh;
+  background-color: #f1f5f9;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-c0lor);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-color-alt);
+}
+/*============== start sidebar ==============*/
+.sidebar {
+  width: 250px;
+  box-shadow: 0 0 10px #ddd;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 58px;
+    padding: 10px;
+  }
+  .sidebar > h3 {
+    font-size: 13px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  .sidebar h3::after,
+  .sidebar h3::before {
+    display: none;
+  }
+  .sidebar ul li a span {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .sidebar > h3 {
+    margin-bottom: 50px;
+  }
+}
+.sidebar > h3 {
+  text-transform: capitalize;
+}
+.sidebar > h3::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 80px;
+  background-color: black;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sidebar > h3::after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border: solid 5px white;
+  background-color: black;
+  bottom: -29px;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.sidebar ul li a {
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+.sidebar ul li a:hover,
+.sidebar ul li .active {
+  background-color: #f6f6f6;
+}
+.sidebar ul li a span {
+  font-size: 14px;
+  margin-left: 10px;
+}
+/*============== start sidebar ==============*/
+/*============== start content ==============*/
+.content .search::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f002";
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  font-size: 14px;
+  color: var(--grey-color);
+}
+.content .search input {
+  margin-left: 5px;
+  padding-left: 30px;
+  width: 175px;
+  transition: width 0.3s;
+}
+.content .search input:focus {
+  width: 200px;
+}
+.content .search input:focus {
+  outline: #aaa;
+}
+.content .search input:focus::placeholder {
+  opacity: 0;
+}
+.content .icon .notification::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--red-color);
+  border-radius: 50%;
+}
+.content .icon img {
+  width: 32px;
+  height: 32px;
+  margin-left: 15px;
+}
+/*============== end content ==============*/
+/*============== start page hedding ==============*/
+.page h1 {
+  margin: 20px 20px 40px;
+}
+.page h1::after,
+.page h1::before {
+  position: absolute;
+  height: 3px;
+  content: "";
+  bottom: -10px;
+  left: 0;
+}
+.page h1::before {
+  background-color: white;
+  width: 120px;
+}
+.page h1::after {
+  background-color: black;
+  width: 40px;
+}
+/*============== end page hedding ==============*/
+.wraper {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media (max-width: 767px) {
+  .wraper {
+    /* grid-template-columns: minmax(200px,1f); */
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    gap: 10px;
+    margin-right: 10px;
+  }
+}
+.welcom img {
+  width: 170px;
+  margin-bottom: -20px;
+}
+.welcom .avatar {
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-left: 20px;
+  margin-top: -31px;
+}
+@media (max-width: 767px) {
+  .welcom .avatar {
+    margin-left: 0;
+  }
+}
+/*============== start body welcom ==============*/
+.welcom .body {
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+}
+.welcom .body > div {
+  flex: 1;
+}
+.welcom .Visit {
+  margin: 0 15px 15px auto;
+  transition: 0.3s;
+}
+.welcom .Visit:hover {
+  background-color: var(--blue-color-alt);
+}
+@media (max-width: 767px) {
+  .welcom .body > div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+/*============== end body welcom ==============*/
+/*============== start quick-draft ==============*/
+.quick-draft textarea {
+  min-height: 180px;
+  resize: none;
+}
+.quick-draft .save {
+  margin: 0 15px 15px auto;
+  transition: 0.3s;
+}
+.quick-draft .save:hover {
+  background-color: var(--blue-color-alt);
+}
+/*============== end quick-draft ==============*/
+/*============== start Yearly-Targets ==============*/
+.Yearly-Targets .icons {
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+.Yearly-Targets .details .progress {
+  height: 4px;
+}
+.Yearly-Targets .blue .progress,
+.Yearly-Targets .blue .icons {
+  background-color: rgb(0 117 255 / 20%);
+}
+.Yearly-Targets .details {
+  flex: 1;
+}
+.Yearly-Targets .details .progress > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.Yearly-Targets .details .progress > span span {
+  position: absolute;
+  top: -31px;
+  border-radius: 2px;
+  right: -12px;
+  padding: 1px 2px;
+  color: white;
+}
+.Yearly-Targets .blue i {
+  color: var(--blue-c0lor);
+}
+.Yearly-Targets .green i {
+  color: var(--green-color);
+}
+.Yearly-Targets .blue i {
+  color: var(--orange-color);
+}
+.Yearly-Targets .details .progress > span span::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  right: 13px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--blue-c0lor) transparent transparent;
+}
+.Yearly-Targets .orange .details .progress > span span::after {
+  border-color: var(--orange-color) transparent transparent;
+}
+.Yearly-Targets .green .icons,
+.Yearly-Targets .green .progress {
+  background-color: rgb(34 197 94 / 20%);
+}
+.Yearly-Targets .orange .icons,
+.Yearly-Targets .orange .progress {
+  background-color: rgb(245 158 11 / 20%);
+}
+/*============== end Yearly-Targets ==============*/
+/*============== START tecket ==============*/
+.tecket .box span:first-of-type {
+  font-size: 25px;
+}
+.tecket .box {
+  width: calc(50% - 10px);
+}
+@media (max-width: 768px) {
+  .tecket .box {
+    width: 100%;
+  }
+}
+/*============== end tecket ==============*/
+/*============== START Latest-news ==============*/
+.Latest-news > div:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+@media (max-width: 767px) {
+  .Latest-news .box {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .Latest-news .box .info {
+    flex-direction: column;
+    margin-bottom: 5px;
+  }
+}
+.Latest-news .box img {
+  max-width: 100%;
+  width: 100px;
+}
+.Latest-news .text {
+  margin-left: 10px;
+}
+/*============== end Latest-news ==============*/
+/*============== START Latest Tasks ==============*/
+.Latest-Tasks .txt-throght {
+  opacity: 0.5;
+}
+.Latest-Tasks .txt-throght h3,
+.Latest-Tasks .txt-throght p {
+  text-decoration: line-through;
+}
+.Latest-Tasks .box:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.Latest-Tasks .box i {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.Latest-Tasks .box i:hover {
+  color: var(--red-color);
+}
+/*============== end Latest Tasks ==============*/
+/*============== START Latest Tasks ==============*/
+.last-update .row-box img {
+  max-width: 100%;
+  width: 40px;
+  height: 40px;
+}
+.last-update .row-box:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+/*============== end Latest Tasks ==============*/
+/*============== START Latest projects ==============*/
+.last-projects ul {
+  padding-left: 20px;
+}
+.last-projects ul::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--blue-c0lor);
+}
+.last-projects ul li::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--blue-c0lor);
+  border-radius: 50%;
+  background-color: white;
+  z-index: 1;
+}
+.last-projects ul .curent::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--blue-c0lor);
+  border-radius: 50%;
+  background-color: var(--blue-c0lor);
+  z-index: 5;
+  animation: change-color 0.8s infinite alternate;
+}
+.last-projects ul .done::before {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--blue-c0lor);
+  border-radius: 50%;
+  background-color: var(--blue-c0lor);
+  z-index: 5;
+}
+.last-projects img {
+  width: 160px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+}
+/*============== START Latest projects ==============*/
+/*============== START Reminders ==============*/
+.Reminders ul li .key {
+  height: 10px;
+  width: 10px;
+}
+.Reminders li .orange {
+  border-left: 3px solid var(--orange-color);
+}
+.Reminders li .red {
+  border-left: 3px solid var(--red-color);
+}
+.Reminders li .green {
+  border-left: 3px solid var(--green-color);
+}
+.Reminders li .blue {
+  border-left: 3px solid var(--blue-c0lor);
+}
+/*============== end Reminders ==============*/
+/*============== START last post   ==============*/
+.Latest-Post .medel {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.Latest-Post .head .profile {
+  margin-left: 20px;
+}
+.Latest-Post img {
+  width: 50px;
+  height: 50px;
+}
+/*============== end last post ==============*/
+/*============== start Social ==============*/
+.Social .box {
+  padding-left: 70px;
+}
+.Social .box i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 52px;
+  transition: 0.3s;
+}
+.Social .twitter {
+  background-color: rgb(29 161 242 / 20%);
+  color: var(--twitter-color);
+}
+.Social .twitter i,
+.Social .twitter a {
+  background-color: var(--twitter-color);
+}
+.Social .facebook {
+  background-color: rgb(24 119 242 / 20%);
+  color: var(--facebook-color);
+}
+.Social .facebook i,
+.Social .facebook a {
+  background-color: var(--facebook-color);
+}
+.Social .youtube {
+  background-color: rgb(255 0 0 / 20%);
+  color: var(--youtube-color);
+}
+.Social .youtube i,
+.Social .youtube a {
+  background-color: var(--youtube-color);
+}
+.Social .linkedin {
+  background-color: rgb(10 102 194 / 20%);
+  color: var(--linked-color);
+}
+.Social .linkedin i,
+.Social .linkedin a {
+  background-color: var(--linked-color);
+}
+.Social i:hover {
+  transform: rotate(5deg);
+}
+/*============== end Social ==============*/
+.projects {
+  min-width: 300px;
+}
+.projects .respounsive-table {
+  overflow-x: auto;
+}
+.projects .respounsive-table table {
+  min-width: 1000px;
+}
+.projects .respounsive-table table th {
+  text-align: left;
+  border: none;
+}
+.projects .respounsive-table table td {
+  padding: 15px;
+}
+.projects .respounsive-table table td img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: white;
+}
+.projects .respounsive-table table td img:not(:last-child) {
+  margin-right: -20px;
+}
+/*========================== Settings page   =====================================================*/
+.toggle-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.toggle-switch {
+  width: 78px;
+  height: 32px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.toggle-switch::before {
+  content: "\f00d";
+  font-family: var(--font-Awesome);
+  font-weight: 900;
+  background-color: white;
+  color: #aaa;
+  border-radius: 50%;
+  display: flex;
+  height: 24px;
+  width: 24px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 4px;
+  transition: 0.3s;
+  left: 4px;
+}
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--blue-c0lor);
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+  left: 50px;
+  color: var(--blue-c0lor);
+  content: "\f00c";
+}
+/*-------------------------------*/
+.setting-page {
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+@media (max-width: 768px) {
+  .setting-page {
+    grid-template-columns: minmax(100px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+.Close-Message {
+  resize: none;
+  min-height: 150px;
+  border: 1px solid #ccc;
+}
+/*-------------------------------*/
+/*-------------------------------*/
+.general-info form {
+  width: 100%;
+}
+.general-info form .main-input,
+.general-info form .Email {
+  border: 1px solid var(--grey-color);
+}
+.general-info form .Email {
+  flex-basis: 70%;
+  flex: 1;
+}
+.general-info form a {
+  display: block;
+  width: fit-content;
+  margin-left: 15px;
+  text-decoration: none;
+  color: var(--blue-c0lor);
+  padding-right: 10px;
+  font-weight: bold;
+}
+/*-------------------------------*/
+/*-------------------------------*/
+.setting-page .Security-Info .row {
+  padding-bottom: 15px;
+}
+.setting-page .Security-Info .row:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+/*-------------------------------*/
+/*-------------------------------*/
+.Social-Info > div i {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  background-color: #f6f6f6;
+  border-radius: 5px 0 0 5px;
+  border-right: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.Social-Info .twitter i:hover {
+  color: var(--twitter-color);
+}
+.Social-Info .facebook i:hover {
+  color: var(--facebook-color);
+}
+.Social-Info .linkedin i:hover {
+  color: var(--linked-color);
+}
+.Social-Info .youtube i:hover {
+  color: var(--youtube-color);
+}
+.Social-Info > div input {
+  border: 1px solid #ddd;
+  border-radius: 0 5px 5px 0;
+}
+/*==================== start checkbox control =================================*/
+.control .chckbx {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.control label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.control label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  border: 2px solid var(--grey-color);
+  width: 14px;
+  height: 14px;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  margin-top: -9px;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+.control label:hover::before {
+  border-color: var(--blue-color-alt);
+}
+.control label::after {
+  font-family: var(--font-Awesome);
+  content: "\f00c";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  font-size: 12px;
+  height: 18px;
+  width: 18px;
+  background-color: var(--blue-c0lor);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  transform: scale(0) rotate(360deg);
+  border-radius: 4px;
+}
+.control .chckbx:checked + label::after {
+  transform: scale(1);
+}
+/*==================== end checkbox control =================================*/
+/*==================== start Backup-Manager =================================*/
+.Backup-Manager .radio {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.Backup-Manager .data label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  width: 100%;
+}
+.Backup-Manager .data label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 18px;
+  width: 18px;
+  border: 2px solid var(--grey-color);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.Backup-Manager .data label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: blue;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.Backup-Manager .radio:checked + label::after {
+  transform: scale(1);
+}
+.Backup-Manager .radio:checked + label::before {
+  border-color: var(--blue-c0lor);
+}
+.Backup-Manager .servers {
+  padding-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid #eee;
+}
+.Backup-Manager .servers > div {
+  border: 2px solid var(--grey-color);
+  flex-basis: 30%;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .Backup-Manager .servers > div {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+}
+.Backup-Manager .servers .server label {
+  padding: 15px;
+  display: block;
+  cursor: pointer;
+}
+.Backup-Manager .servers input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.Backup-Manager .servers input[type="radio"]:checked + .server {
+  border-color: var(--blue-c0lor);
+  color: var(--blue-c0lor);
+}
+/*==================== end Backup-Manager =================================*/
+/*========================== Settings page   =====================================================*/
+/*========================== profile page   =====================================================*/
+.Profile-page .photo {
+  width: 300px;
+  border-right: 1px solid #eee;
+  text-align: center;
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .Profile-page .content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.Profile-page .photo:hover {
+  background-color: #efefef;
+}
+.Profile-page .photo img {
+  width: 120px;
+  height: 120px;
+}
+.Profile-page .photo .prog {
+  height: 6px;
+  width: 70%;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: auto;
+}
+.Profile-page .photo .rate {
+  height: 100%;
+}
+.Profile-page .photo .stars {
+  color: goldenrod;
+  margin-top: 20px;
+}
+.Profile-page .info .box {
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.Profile-page .info .box:hover {
+  background-color: #efefef;
+}
+.Profile-page .info .box > div {
+  min-width: 250px;
+  padding: 10px 0 0;
+}
+@media (max-width: 768px) {
+  .Profile-page .info .box > div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.Profile-page .toggle-switch {
+  height: 20px;
+}
+.Profile-page .toggle-switch::before {
+  width: 12px;
+  height: 12px;
+  font-size: 8px;
+}
+.Profile-page .toggle-checkbox:checked + .toggle-switch::before {
+  left: 60px;
+}
+/*============== start skills-Latest-Activities ==============*/
+.Latest-Activities {
+  flex-grow: 1;
+}
+.Latest-Activities .Activity img {
+  height: 64px;
+  width: 64px;
+  margin-right: 10px;
+}
+.Latest-Activities .Activity .data {
+  margin-left: auto;
+  text-align: right;
+}
+.Latest-Activities .Activity:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.Latest-Activities .Activity {
+  padding-top: 10px;
+}
+@media (max-width: 768px) {
+  .Latest-Activities .Activity {
+    flex-direction: column;
+  }
+  .Latest-Activities .Activity .data {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+.skills-Latest-Activities .skills .row {
+  padding: 15px 0;
+}
+.skills-Latest-Activities .skills {
+  min-width: 250px;
+}
+.skills-Latest-Activities .skills .row:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+@media (max-width: 768px) {
+  .skills-Latest-Activities {
+    flex-direction: column;
+  }
+}
+/*============== end skills-Latest-Activities ==============*/
+/*========================== profile page   =====================================================*/
+/*========================== start Projects page   =====================================================*/
+.Projects-holder {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+@media (max-width: 768px) {
+  .Projects-holder {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+}
+.Projects-holder .Project .team {
+  min-height: 80px;
+}
+
+.Projects-holder .Project .team img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.Projects-holder .right-span {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  font-size: 13px;
+}
+.Projects-holder .Project .team img:not(:first-child) {
+  margin-left: -15px;
+}
+.Projects-holder .futures {
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .Projects-holder .futures {
+    flex-direction: column;
+  }
+  .Projects-holder .futures span:first-child {
+    margin-right: auto;
+  }
+  .Projects-holder .futures span {
+    margin-bottom: 10px;
+  }
+}
+.Projects-holder .futures span:first-child {
+  margin-left: auto;
+}
+.Projects-holder .futures span:not(:first-child) {
+  margin-left: 5px;
+}
+.Projects-holder .futures span {
+  font-size: 13px;
+}
+@media (max-width: 768px) {
+  .Projects-holder .foot {
+    flex-direction: column;
+  }
+  .Projects-holder .foot .prog {
+    margin-bottom: 10px;
+  }
+}
+.Projects-holder .prog {
+  height: 8px;
+  width: 80%;
+}
+.Projects-holder .foot span:last-of-type {
+  color: var(--grey-color);
+}
+.Projects-holder .prog .rate {
+  height: 100%;
+}
+/*========================== end Projects page   =====================================================*/
+/*========================== start Courses page   =====================================================*/
+.Courses-holder {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+@media (max-width: 768px) {
+  .Courses-holder {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+}
+.Courses-holder .Course {
+  box-shadow: 0 0 10px #ddd;
+}
+.Courses-holder .Course .Course-img {
+  max-width: 100%;
+}
+.Courses-holder .info {
+  border-bottom: 1px solid #eee;
+}
+.Courses-holder .foot a {
+  position: absolute;
+  margin-left: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -11px;
+}
+.Courses-holder .Course .Course-team {
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  padding: 2px;
+  background-color: white;
+  top: 20px;
+  left: 20px;
+}
+/*==========================
+  end Courses page   =====================================================*/
+/*========================== start Friends page   =====================================================*/
+.Friends-holder {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+@media (max-width: 768px) {
+  .Friends-holder {
+    grid-template-columns: minmax(250px, 1fr);
+  }
+}
+.Friends-holder .icon-contact i {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.Friends-holder .icon-contact i:hover {
+  background-color: var(--blue-c0lor);
+  color: white;
+  scale: 1.1;
+}
+.Friends-holder .profile-photo,
+.Friends-holder .medlle {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+.Friends-holder .Friend .medlle i {
+  margin-right: 10px;
+  color: var(--grey-color);
+}
+.Friends-holder .Friend .medlle {
+  padding-bottom: 10px;
+}
+.Friends-holder .Friend .vip {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0.2;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--grey-color);
+}
+.Friends-holder .Friend .foot a:first-child {
+  margin-right: 5px;
+}
+/*========================== end Friends page   =====================================================*/
+
+/*========================== start Files page   =====================================================*/
+.files-page .file-stats {
+  min-width: 260px;
+}
+@media (max-width: 768px) {
+  .files-page {
+    flex-direction: column-reverse;
+  }
+}
+.files-page .files {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  flex-grow: 1;
+}
+.files-page .files .file img {
+  width: 64px;
+  height: 64px;
+  transition: 0.3s;
+  margin: 0;
+  margin: 25px 0 10px;
+  cursor: pointer;
+}
+.files-page .files .file img:hover {
+  transform: rotate(10deg);
+}
+.files-page .files .foot {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+.files-page .file-stats {
+  height: fit-content;
+}
+.files-page .file-stats .row {
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.files-page .file-stats .icon {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.files-page .file-stats .blue {
+  background-color: rgb(0 117 255 / 20%);
+}
+.files-page .file-stats .orange {
+  background-color: rgb(245 158 11 / 20%);
+}
+.files-page .file-stats .red {
+  background-color: rgb(244 67 54 / 20%);
+}
+.files-page .file-stats .green {
+  background-color: rgb(34 197 94 / 20%);
+}
+
+.files-page .file-stats .size {
+  margin-left: auto;
+}
+.files-page .file-stats a {
+  margin: 15px auto;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+.files-page .file-stats a:hover {
+  background-color: var(--blue-color-alt);
+}
+.files-page .file-stats a i {
+  margin-right: 10px;
+  /* transition: 0.3s; */
+}
+.files-page .file-stats a:hover i {
+  animation: go-up 0.8s infinite;
+}
+/*========================== end Files page   =====================================================*/
+
+/*========================== start Plans page   =====================================================*/
+.Plans {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+@media (max-width: 768px) {
+  .Plans {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+.Plans .head {
+  color: white;
+}
+.Plans .green .head {
+  background-color: var(--green-color);
+  outline: 3px solid var(--green-color);
+  border: 3px solid white;
+}
+.Plans .blue .head {
+  background-color: var(--blue-c0lor);
+  outline: 3px solid var(--blue-c0lor);
+  border: 3px solid white;
+}
+.Plans .orange .head {
+  background-color: var(--orange-color);
+  outline: 3px solid var(--orange-color);
+  border: 3px solid white;
+}
+.Plans .price {
+  font-size: 40px;
+  font-weight: bold;
+  margin: auto;
+}
+.Plans .price span {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  font-size: 25px;
+}
+
+.Plans ul li {
+  padding: 15px 0;
+  font-size: 15px;
+}
+
+.Plans ul li {
+  border-bottom: 1px solid #eee;
+}
+/*========================== end Plans page   =====================================================*/
+
+/*============== START animation ==============*/
+@keyframes change-color {
+  from {
+    background-color: var(--blue-c0lor);
+  }
+  to {
+    background-color: white;
+  }
+}
+@keyframes go-up {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+/*============== START animation ==============*/
